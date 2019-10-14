@@ -131,8 +131,22 @@ h2{
   display: flex;
   box-shadow: 3px 3px 10px gray;
   margin: .5rem 0;
-  padding: 1rem .5rem;
   border-radius: .3rem;
-  cursor: pointer;
   overflow: hidden;
+}
+.todos li>p{
+  height: 100%;
+  width: 95%;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+.todos li>a{
+  height: 100%;
+  width: 5%;
+  padding: 1rem 0;
+  transition: .3s;
+  border-left: solid 1px grey;
+}
+.todos li>a:hover{
+  background-color: red;
 }

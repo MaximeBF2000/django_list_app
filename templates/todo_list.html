@@ -33,7 +33,10 @@
 
     <ul>
       {% for todo in todos %}
-        <li>{{todo.name}}</li>
+        <li>
+          <p> {{todo.name}} </p>
+          <a class="center" href="/delete_todo">🗑️</a>
+        </li>
       {% endfor %}
     </ul>
   </section>
