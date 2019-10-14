@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row body">
+
+  <section class="lists align-v">
+    <h2> Your lists </h2>
+
+    <form action="/add_list" class="lists_form add_form" method="POST"> {% csrf_token %}
+      <input type="text" name="addlist" placeholder="Add a new list here..."/>
+      <button type="submit">+</button>
+    </form>
+    <ul>
+      {% for list in lists %}
+        <li>
+          <a class="list_name align-h" href="/lists/{{list.id}}" >{{ list.name }}</a>
+          <a class="delete_list center" href="/delete_list/{{list.id}}">🗑️</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  </section>
+
+
+
+  <section class="todos align-v">
+    
+  </section>
+
+</div>
+
+{% endblock %}

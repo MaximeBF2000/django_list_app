@@ -1,0 +1,138 @@
+:root{
+  /* General */
+  --main_font: 'Montserrat', serif;
+
+  --lists_section_width: 20%;
+  --todos_section_width: calc(100% - var(--lists_section_width));
+
+
+  /* Section Lists */
+
+  --add_form_width: 90%;
+  --add_form_height: 2rem;
+  --add_form_borderradius: .3rem;
+  --add_input_width: 90%;
+  --add_input_padding: .3rem;
+  --add_button_width: calc(100% - var(--add_input_width));
+
+  --list_width: 90%;
+
+
+  /* Section Todos */
+  --todo_width: 90%;
+
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main_font);
+}
+
+.body{
+  width: 100vw;
+  height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul{
+  list-style: none;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.align-v{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.align-h{
+  display: flex;
+  align-items: center;
+}
+
+section.lists{
+  height: 100%;
+  width: var(--lists_section_width);
+  background-color: #0077ffd5;
+}
+section.todos{
+  height: 100%;
+  width: var(--todos_section_width);
+}
+
+h2{
+  margin: .5rem 0;
+}
+
+.add_form{
+  width: var(--add_form_width);
+  height: var(--add_form_height);
+  display: flex;
+  margin: 1.5rem 0 2rem 0;
+  border-radius: var(--add_form_borderradius);
+  overflow: hidden;
+}
+.add_form>input{
+  height: 100%;
+  width: 90%;
+  padding: var(--add_input_padding);
+}
+.add_form>button[type="submit"]{
+  height: 100%;
+  width: var(--add_button_width);
+  cursor: pointer;
+}
+
+.lists>ul{
+  width: var(--list_width);
+}
+.lists li{
+  display: flex;
+  background-color: white;
+  margin: .5rem 0;
+  border-radius: .3rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.lists li>.list_name{
+  height: 100%;
+  width: 80%;
+  padding: .8rem 0;
+  padding-left: .5rem;
+}
+.lists li>.delete_list{
+  height: 100%;
+  width: 20%;
+  padding: .8rem 0;
+  border-left: solid 1px grey;
+  transition: 0.3s;
+}
+.lists li>.delete_list:hover{
+  background-color: red;
+}
+
+.todos ul{
+  width: var(--todo_width);
+}
+.todos li{
+  width: 100%;
+  display: flex;
+  box-shadow: 3px 3px 10px gray;
+  margin: .5rem 0;
+  padding: 1rem .5rem;
+  border-radius: .3rem;
+  cursor: pointer;
+  overflow: hidden;
+}
